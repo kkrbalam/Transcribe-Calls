@@ -12,9 +12,6 @@ import pandas as pd
 import pdfkit
 
 
-today = datetime.today().strftime('%Y-%m-%d')
-
-
 def get_lp_calls(date):
     """
     Fetches data from leadspedia on all transfers
@@ -449,6 +446,7 @@ def move_files(filename, date):
 
 
 def main():
+    today = datetime.today().strftime('%Y-%m-%d')
     leadspedia_data = get_lp_calls(today)
     new_recordings = get_convoso_calls(today)
     lead_data = get_table_data(leadspedia_data, new_recordings)
