@@ -411,9 +411,6 @@ def mark_up_transcript(filename, dft):
         # print("finished")
 
 
-# In[69]:
-
-
 def move_files(filename, date):
     """
     Deletes and moves files to final destinations
